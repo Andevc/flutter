@@ -13,7 +13,7 @@ Esta guía está diseñada para ayudarte a comprender los conceptos básicos de 
 | Ejemplo de uso            | Textos, íconos, widgets estáticos      | Contadores, formularios, animaciones      |
 
 ### Ejemplo:
-```
+``` js
 // StatelessWidget
 class MiTexto extends StatelessWidget {
   @override
@@ -54,7 +54,7 @@ class _ContadorState extends State<Contador> {
 ---
 
 ## 🔘 Cómo crear un botón
-```
+``` js
 ElevatedButton(
   onPressed: () {
     print('¡Botón presionado!');
@@ -67,7 +67,7 @@ ElevatedButton(
 ## 🎨 Estilos en Flutter
 
 ### Texto con estilo:
-```
+``` js
 Text(
   'Hola mundo',
   style: TextStyle(
@@ -78,7 +78,7 @@ Text(
 )
 ```
 ### Botón estilizado:
-```
+``` js
 ElevatedButton(
   style: ElevatedButton.styleFrom(
     primary: Colors.green,
@@ -92,7 +92,7 @@ ElevatedButton(
 ---
 
 ## 📄 Navegación entre páginas
-```
+``` js
 // Página 1
 class PaginaUno extends StatelessWidget {
   @override
@@ -130,7 +130,7 @@ class PaginaDos extends StatelessWidget {
 ---
 
 ## 🔧 Cómo declarar funciones
-```
+``` js
 void saludar(String nombre) {
   print('Hola, \$nombre');
 }
@@ -141,7 +141,7 @@ saludar('Juan'); // Imprime: Hola, Juan
 ---
 
 ## 🧾 Cómo crear y mostrar listas
-```
+``` js
 List<String> frutas = ['Manzana', 'Banana', 'Naranja'];
 
 ListView.builder(
@@ -156,7 +156,7 @@ ListView.builder(
 ---
 
 ## 🔄 Cómo actualizar un contador al hacer clic
-```
+``` js
 class ContadorPage extends StatefulWidget {
   @override
   _ContadorPageState createState() => _ContadorPageState();
@@ -199,7 +199,7 @@ class _ContadorPageState extends State<ContadorPage> {
 
 ### Imagenes / Audio
 yaml
-```
+``` js
 dependencies:
   audioplayers: ^5.2.1
 
@@ -210,7 +210,7 @@ flutter:
     - assets/audio/click.mp3
 ```
 imagenes
-```
+``` js
 Container(
   decoration: BoxDecoration(
     image: DecorationImage(
@@ -221,8 +221,8 @@ Container(
 )
 ```
 
-audio
-```
+audio 
+``` js
 import 'package:audioplayers/audioplayers.dart';
 
 final player = AudioPlayer();
@@ -232,7 +232,7 @@ void reproducirSonido() async {
 }
 ```
 tambien funciona asi
-```
+``` js
 ElevatedButton(
      onPressed: () {
           player.play(AssetSource(sound.replaceFirst('assets/', '')));
